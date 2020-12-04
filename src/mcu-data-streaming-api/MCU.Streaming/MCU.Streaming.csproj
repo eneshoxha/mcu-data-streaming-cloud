@@ -8,5 +8,16 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MCU.Streaming.Abstraction\MCU.Streaming.Abstraction.csproj" />
+    <ProjectReference Include="..\MCU.Streaming.Data.Model\MCU.Streaming.Data.Model.csproj" />
+    <ProjectReference Include="..\MCU.Streaming.Logic\MCU.Streaming.Logic.csproj" />
+    <ProjectReference Include="..\MCU.Streaming.Utility\MCU.Streaming.Utility.csproj" />
+  </ItemGroup>
+
 
 </Project>

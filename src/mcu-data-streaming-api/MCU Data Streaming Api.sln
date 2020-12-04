@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCU.Streaming", "MCU.Streaming\MCU.Streaming.csproj", "{927674B8-BCBD-4B5C-B989-044F3A76435A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCU.Streaming", "MCU.Streaming\MCU.Streaming.csproj", "{927674B8-BCBD-4B5C-B989-044F3A76435A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCU.Streaming.Data.Model", "MCU.Streaming.Data.Model\MCU.Streaming.Data.Model.csproj", "{C2E121F9-B70A-47C3-90EA-11FA8DCE1F61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCU.Streaming.Data.Model", "MCU.Streaming.Data.Model\MCU.Streaming.Data.Model.csproj", "{C2E121F9-B70A-47C3-90EA-11FA8DCE1F61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCU.Streaming.Logic", "MCU.Streaming.Logic\MCU.Streaming.Logic.csproj", "{28FF26CB-D226-441C-908E-202C569EA16E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCU.Streaming.Logic", "MCU.Streaming.Logic\MCU.Streaming.Logic.csproj", "{28FF26CB-D226-441C-908E-202C569EA16E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCU.Streaming.Utility", "MCU.Streaming.Utility\MCU.Streaming.Utility.csproj", "{9D7224A7-FC1C-425E-9CA0-C0DD0644D647}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCU.Streaming.Utility", "MCU.Streaming.Utility\MCU.Streaming.Utility.csproj", "{9D7224A7-FC1C-425E-9CA0-C0DD0644D647}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCU.Streaming.Abstraction", "MCU.Streaming.Abstraction\MCU.Streaming.Abstraction.csproj", "{B7BB5CDD-D072-4B8D-A087-424D91E6F69D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9D7224A7-FC1C-425E-9CA0-C0DD0644D647}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D7224A7-FC1C-425E-9CA0-C0DD0644D647}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D7224A7-FC1C-425E-9CA0-C0DD0644D647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7BB5CDD-D072-4B8D-A087-424D91E6F69D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7BB5CDD-D072-4B8D-A087-424D91E6F69D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7BB5CDD-D072-4B8D-A087-424D91E6F69D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7BB5CDD-D072-4B8D-A087-424D91E6F69D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
