@@ -1,0 +1,3 @@
+In this folder is an angular application.
+
+To continue...
