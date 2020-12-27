@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="UP.MCU.Edge.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UP.MCU.Edge"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#FFF6F6F6">
+
+    <Grid>
+        <Grid Width="300" Height="300" HorizontalAlignment="Left" Margin="100,0,0,0">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Assets/Images/601px-University_of_Prishtina_logo.png" Stretch="Uniform"/>
+            </Grid.Background>
+        </Grid>
+
+        <Grid HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top" Background="#FFCACACA">
+            <TextBlock HorizontalAlignment="Left" Margin="40,0,0,0" Text="Status" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="20" Foreground="Black"/>
+        </Grid>
+        <Grid Background="#FFE8E8E8" Margin="464,202,109,150">
+            <TextBlock HorizontalAlignment="Left" Margin="40,40,0,0" Text="Events" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="Black"/>
+        </Grid>
+    </Grid>
+</Page>
