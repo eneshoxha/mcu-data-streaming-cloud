@@ -155,6 +155,12 @@
       <Version>6.2.11</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UP.MCU.Edge.Logic\UP.MCU.Edge.Logic.csproj">
+      <Project>{69c70e6e-fe61-46c1-9b95-dcacfead0a00}</Project>
+      <Name>UP.MCU.Edge.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

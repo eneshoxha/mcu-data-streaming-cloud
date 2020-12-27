@@ -26,5 +26,10 @@ namespace UP.MCU.Edge
         {
             this.InitializeComponent();
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtDeviceName.Text = $"Device name: {Environment.MachineName}";
+        }
     }
-}
+} 
