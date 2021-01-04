@@ -3,12 +3,14 @@ using Buildersoft.Andy.X.Streams;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using UP.MCU.Edge.Logic.Services.Outbounds.Tests;
 
 namespace UP.MCU.Edge.Logic.Services.Inbounds.Tests
 {
    public class RequestInboundService
     {
-        Source<Models.Test.Request> source;
+        private readonly Source<Models.Test.Request> source;
+        private readonly ResponseOutboundService _responseOutboundService;
         public RequestInboundService(AndyXClient andyXClient)
         {
             var reader = new Reader<Models.Test.Request>(andyXClient.GetClient())
@@ -18,6 +20,8 @@ namespace UP.MCU.Edge.Logic.Services.Inbounds.Tests
                 .ReaderName("request-inbound-up-edge-mcu")
                 .ReaderAs(Buildersoft.Andy.X.Client.Model.ReaderAs.Subscription)
                 .Build();
+
+            _responseOutboundService = new ResponseOutboundService(andyXClient);
 
             source = new Source<Models.Test.Request>(reader)
                 .Configure(new Buildersoft.Andy.X.Streams.Settings.SourceConfigurationSettings())

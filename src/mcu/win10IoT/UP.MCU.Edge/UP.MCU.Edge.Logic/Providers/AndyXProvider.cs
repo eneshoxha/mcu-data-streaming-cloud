@@ -8,6 +8,7 @@ namespace UP.MCU.Edge.Logic.Providers
     public class AndyXProvider
     {
         private readonly AndyXClient _andyXClient;
+        private bool isBuild = true;
         public AndyXProvider(string url, string tenant, string product, string token)
         {
             _andyXClient = new AndyXClient(url)
@@ -21,6 +22,11 @@ namespace UP.MCU.Edge.Logic.Providers
         public AndyXClient GetAndyXClient()
         {
             return _andyXClient;
+        }
+
+        public bool IsAndyXClientConnected()
+        {
+            return isBuild;
         }
     }
 }

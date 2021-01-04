@@ -21,6 +21,7 @@
         </Grid>
         <Grid Background="#FFE8E8E8" Margin="464,202,109,150">
             <TextBlock HorizontalAlignment="Left" Margin="40,40,0,0" Text="Events" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" Foreground="Black" FontWeight="Bold"/>
+            <TextBlock x:Name="txtConnection" HorizontalAlignment="Left" Margin="40,0,0,40" Text="Connection: Disconnected" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="30" Foreground="Black" FontWeight="Bold"/>
         </Grid>
     </Grid>
 </Page>

@@ -1,16 +1,15 @@
 ﻿using Buildersoft.Andy.X.Client;
 using Buildersoft.Andy.X.Streams;
 using Buildersoft.Andy.X.Streams.Model;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using UP.MCU.Edge.Logic.Models.Test;
+using UP.MCU.Edge.Logic.Services.Outbounds.Tests;
 
 namespace UP.MCU.Edge.Logic.Services.Inbounds.Tests
 {
     public class ResponseInboundService
     {
-        Source<Models.Test.Response> source;
+        private readonly Source<Models.Test.Response> source;
+        private readonly RequestOutboundService _requestOutboundService;
 
         public ResponseInboundService(AndyXClient andyXClient)
         {
@@ -18,11 +17,13 @@ namespace UP.MCU.Edge.Logic.Services.Inbounds.Tests
                 .Component(Models.Test.Response.ComponentName)
                 .Book(Models.Test.Response.BookName)
                 .ReaderType(Buildersoft.Andy.X.Client.Model.ReaderTypes.Exclusive)
-                .ReaderName("request-inbound-up-edge-mcu")
+                .ReaderName("response-inbound-up-edge-mcu")
                 .ReaderAs(Buildersoft.Andy.X.Client.Model.ReaderAs.Subscription)
                 .Build();
 
-            source = new Source<Models.Test.Response>(reader)
+            _requestOutboundService = new RequestOutboundService(andyXClient);
+
+            source = new Source<Response>(reader)
                 .Configure(new Buildersoft.Andy.X.Streams.Settings.SourceConfigurationSettings())
                 .Throttle(1, 1);
 
@@ -30,9 +31,9 @@ namespace UP.MCU.Edge.Logic.Services.Inbounds.Tests
             source.InitializeReader();
         }
 
-        private void Source_Integration(object sender, Data<Response> e)
+        private async void Source_Integration(object sender, Data<Response> e)
         {
-            // Implement the logic of response on MCU.
+            await _requestOutboundService.WriteRequest(new Request());
         }
     }
 }

@@ -124,6 +124,7 @@
     <Compile Include="Models\Test\Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\AndyXProvider.cs" />
+    <Compile Include="Services\BaseService.cs" />
     <Compile Include="Services\Inbounds\Tests\RequestInboundService.cs" />
     <Compile Include="Services\Inbounds\Tests\ResponseInboundService.cs" />
     <Compile Include="Services\Outbounds\Tests\RequestOutboundService.cs" />
