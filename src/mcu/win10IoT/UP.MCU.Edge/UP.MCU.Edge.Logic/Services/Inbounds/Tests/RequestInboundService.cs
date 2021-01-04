@@ -3,11 +3,12 @@ using Buildersoft.Andy.X.Streams;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using UP.MCU.Edge.Logic.Services.Outbounds.Tests;
 
 namespace UP.MCU.Edge.Logic.Services.Inbounds.Tests
 {
-   public class RequestInboundService
+    public class RequestInboundService
     {
         private readonly Source<Models.Test.Request> source;
         private readonly ResponseOutboundService _responseOutboundService;
@@ -31,9 +32,10 @@ namespace UP.MCU.Edge.Logic.Services.Inbounds.Tests
             source.InitializeReader();
         }
 
-        private void Source_Integration(object sender, Buildersoft.Andy.X.Streams.Model.Data<Models.Test.Request> e)
+        private async void Source_Integration(object sender, Buildersoft.Andy.X.Streams.Model.Data<Models.Test.Request> e)
         {
-            // Implement the logic of request on MCU.
+            Thread.Sleep(new TimeSpan(0, 0, 10));
+            await _responseOutboundService.WriteResponse(new Models.Test.Response() { Message = e.RawData.Message, Autonumber = e.RawData.Autonumber });
         }
     }
 }
