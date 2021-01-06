@@ -12,9 +12,9 @@ namespace UP.MCU.Edge.Logic.Models.Time
         public static string BookName = "ngjarja-kohe";
 
         public DateTime Data { get; set; }
-        public TimeSpan Koha { get; set; }
+        public string Koha { get; set; }
 
-        public TimeSpan KohaEPranuar { get; set; }
+        public string KohaEPranuar { get; set; }
         public double DiferencaNeMilisekonda { get; set; }
     }
 }

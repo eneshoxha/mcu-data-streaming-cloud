@@ -41,8 +41,8 @@ namespace UP.MCU.Edge.Logic.Services.Inbounds.Time
             {
                 Data = e.RawData.Data,
                 Koha = e.RawData.Koha,
-                KohaEPranuar = kohaEPranuar,
-                DiferencaNeMilisekonda = (kohaEPranuar - e.RawData.Koha).TotalMilliseconds
+                KohaEPranuar = kohaEPranuar.ToString(),
+                DiferencaNeMilisekonda = (kohaEPranuar - TimeSpan.Parse(e.RawData.Koha)).TotalMilliseconds
             };
             await _eventOutboundService.WriteEvent(@event);
         }

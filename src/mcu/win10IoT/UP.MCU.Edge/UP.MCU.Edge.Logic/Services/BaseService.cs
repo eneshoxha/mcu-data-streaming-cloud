@@ -47,7 +47,7 @@ namespace UP.MCU.Edge.Logic.Services
             await commandOutboundService.WriteCommand(new Models.Time.Command()
             {
                 Data = DateTime.Now,
-                Koha = DateTime.Now.TimeOfDay
+                Koha = DateTime.Now.TimeOfDay.ToString()
             });
         }
     }

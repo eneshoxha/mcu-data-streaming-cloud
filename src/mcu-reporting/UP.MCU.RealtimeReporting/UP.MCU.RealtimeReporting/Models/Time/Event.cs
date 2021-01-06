@@ -4,14 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UP.MCU.Edge.Logic.Models.Time
+namespace UP.MCU.RealtimeReporting.Models.Time
 {
-    public class Command
+    public class Event
     {
         public static string ComponentName = "kontrolleri-kohe";
-        public static string BookName = "komanda-kohe";
+        public static string BookName = "ngjarja-kohe";
 
         public DateTime Data { get; set; }
         public string Koha { get; set; }
+
+        public string KohaEPranuar { get; set; }
+        public double DiferencaNeMilisekonda { get; set; }
     }
 }

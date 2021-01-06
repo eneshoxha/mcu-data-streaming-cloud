@@ -1,0 +1,25 @@
+﻿<Window x:Class="UP.MCU.RealtimeReporting.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UP.MCU.RealtimeReporting"
+        mc:Ignorable="d"
+        Title="Raportimi ne kohe reale - UP Mikrokontroller" Height="1035.333" Width="1361.333" WindowState="Maximized" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DVC:Chart x:Name="chartVonesaKoheore" Title="Paraqitja grafike e voneses koheore (Vk)" Margin="0,50,0,0" FontFamily="Bahnschrift Light" Grid.ColumnSpan="2" Background="#FFEEEEEE">
+            <DVC:LineSeries IndependentValuePath="Key" DependentValuePath="Value" Title="Vk" AnimationSequence="Simultaneous"/>
+        </DVC:Chart>
+        <Grid HorizontalAlignment="Stretch" Height="50" VerticalAlignment="Top" Background="#FFEEEEEE" Grid.ColumnSpan="2" Margin="0,0,-0.333,0">
+            <Grid.Effect>
+                <DropShadowEffect ShadowDepth="0"/>
+            </Grid.Effect>
+            <Label Content="Rregullimi digjital me komunikim nepermjet cloud" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="16" FontWeight="Normal" FontFamily="Bahnschrift"/>
+        </Grid>
+    </Grid>
+</Window>
