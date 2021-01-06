@@ -24,6 +24,7 @@ namespace UP.MCU.Edge.Logic.Services.Inbounds.Tests
                 .Build();
 
             _requestOutboundService = new RequestOutboundService(andyXClient);
+
             _requestOutboundService.WriteRequest(new Request() { Message = "IncrementNumber", Autonumber = 1 });
 
             source = new Source<Response>(reader)

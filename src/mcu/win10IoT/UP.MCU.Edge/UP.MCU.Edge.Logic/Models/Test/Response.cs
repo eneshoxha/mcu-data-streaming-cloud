@@ -6,8 +6,8 @@ namespace UP.MCU.Edge.Logic.Models.Test
 {
     public class Response
     {
-        public static string ComponentName = "test";
-        public static string BookName = "test-response";
+        public static string ComponentName = "kontrolleri-test";
+        public static string BookName = "ngjarja-test";
 
         public double Autonumber { get; set; }
         public string Message { get; set; }

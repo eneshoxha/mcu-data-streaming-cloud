@@ -122,13 +122,18 @@
   <ItemGroup>
     <Compile Include="Models\Test\Request.cs" />
     <Compile Include="Models\Test\Response.cs" />
+    <Compile Include="Models\Time\Command.cs" />
+    <Compile Include="Models\Time\Event.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\AndyXProvider.cs" />
     <Compile Include="Services\BaseService.cs" />
     <Compile Include="Services\Inbounds\Tests\RequestInboundService.cs" />
     <Compile Include="Services\Inbounds\Tests\ResponseInboundService.cs" />
+    <Compile Include="Services\Inbounds\Time\CommandInboundService.cs" />
     <Compile Include="Services\Outbounds\Tests\RequestOutboundService.cs" />
     <Compile Include="Services\Outbounds\Tests\ResponseOutboundService.cs" />
+    <Compile Include="Services\Outbounds\Time\CommandOutboundService.cs" />
+    <Compile Include="Services\Outbounds\Time\EventOutboundService.cs" />
     <EmbeddedResource Include="Properties\UP.MCU.Edge.Logic.rd.xml" />
   </ItemGroup>
   <ItemGroup>
