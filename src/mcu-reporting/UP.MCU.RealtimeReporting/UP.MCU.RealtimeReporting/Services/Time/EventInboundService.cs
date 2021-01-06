@@ -28,7 +28,7 @@ namespace UP.MCU.RealtimeReporting.Services.Time
                .Component(Event.ComponentName)
                .Book(Event.BookName)
                .ReaderType(Buildersoft.Andy.X.Client.Model.ReaderTypes.Exclusive)
-               .ReaderName("reporting-reader-vonesa-kohore")
+               .ReaderName("reporting-vonesa-koheore-pc")
                .ReaderAs(Buildersoft.Andy.X.Client.Model.ReaderAs.Subscription)
                .Build();
 

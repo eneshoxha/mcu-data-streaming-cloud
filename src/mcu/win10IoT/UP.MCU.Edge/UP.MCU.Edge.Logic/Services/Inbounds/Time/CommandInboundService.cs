@@ -20,7 +20,7 @@ namespace UP.MCU.Edge.Logic.Services.Inbounds.Time
                 .Component(Command.ComponentName)
                 .Book(Command.BookName)
                 .ReaderType(Buildersoft.Andy.X.Client.Model.ReaderTypes.Exclusive)
-                .ReaderName("command-time-inbound-up-edge-mcu")
+                .ReaderName("command-time-mcu-02")
                 .ReaderAs(Buildersoft.Andy.X.Client.Model.ReaderAs.Subscription)
                 .Build();
 

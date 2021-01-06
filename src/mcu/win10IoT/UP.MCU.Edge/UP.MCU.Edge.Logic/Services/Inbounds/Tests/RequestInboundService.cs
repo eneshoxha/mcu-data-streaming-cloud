@@ -18,7 +18,7 @@ namespace UP.MCU.Edge.Logic.Services.Inbounds.Tests
                 .Component(Models.Test.Request.ComponentName)
                 .Book(Models.Test.Request.BookName)
                 .ReaderType(Buildersoft.Andy.X.Client.Model.ReaderTypes.Exclusive)
-                .ReaderName("request-inbound-up-edge-mcu")
+                .ReaderName("request-test-mcu-01")
                 .ReaderAs(Buildersoft.Andy.X.Client.Model.ReaderAs.Subscription)
                 .Build();
 
