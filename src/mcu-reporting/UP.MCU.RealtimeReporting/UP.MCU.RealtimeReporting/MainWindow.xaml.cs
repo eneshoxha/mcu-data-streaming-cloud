@@ -32,15 +32,15 @@ namespace UP.MCU.RealtimeReporting
             string product = "mcu-streaming";
             string token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhdXRvbWF0aWthIiwianRpIjoiYTRkOTFiM2EtMWQxYi00YTVjLTgzZWUtODYyOTAyMjk3MDRhIiwiVGVuYW50SWQiOiJkNWFhOTU4My0xMjkxLTQxYmYtYTdjZC05YTM5MmM2NWFjNWQiLCJUZW5hbnQiOiJhdXRvbWF0aWthIiwiU2VjdXJpdHlLZXkiOiJiYmU0NDAwNi1iN2IzLTQzODYtYjA4OS00ZDY3NjRkMzFkNDkiLCJleHAiOjE2MTQ1NDI4NTAsImlzcyI6IkJ1aWxkZXJzb2Z0IiwiYXVkIjoiQW5keVgifQ.WExWilKkKu9CEFeh5Fvqym0T4LoTxRxr25rz6ogJoKE";
             andyXProvider = new AndyXProvider(url, tenant, product, token);
-  
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-           
+
             if (andyXProvider.IsAndyXClientConnected() == true)
             {
-                eventInboundService = new EventInboundService(andyXProvider.GetAndyXClient(), chartVonesaKoheore);
+                eventInboundService = new EventInboundService(andyXProvider.GetAndyXClient(), chartVonesaKoheore, listOfResults, vkMesatare, vkMaksimale, vkMinimale);
             }
         }
     }

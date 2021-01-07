@@ -8,18 +8,47 @@
         mc:Ignorable="d"
         Title="Raportimi ne kohe reale - UP Mikrokontroller" Height="1035.333" Width="1361.333" WindowState="Maximized" Loaded="Window_Loaded">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="306*"/>
+            <RowDefinition Height="197*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="906*"/>
+            <ColumnDefinition Width="449*"/>
         </Grid.ColumnDefinitions>
-        <DVC:Chart x:Name="chartVonesaKoheore" Title="Paraqitja grafike e voneses koheore (Vk)" Margin="0,50,0,0" FontFamily="Bahnschrift Light" Grid.ColumnSpan="2" Background="#FFEEEEEE">
-            <DVC:LineSeries IndependentValuePath="Key" DependentValuePath="Value" Title="Vk" AnimationSequence="Simultaneous"/>
+        <DVC:Chart x:Name="chartVonesaKoheore" Title="Paraqitja grafike e voneses koheore (Vk)" Margin="10,60,10,5" FontFamily="Bahnschrift Light" Grid.ColumnSpan="2" Background="#FFEEEEEE" BorderBrush="#FFEEEEEE">
+            <DVC:Chart.Effect>
+                <DropShadowEffect ShadowDepth="0"/>
+            </DVC:Chart.Effect>
+            <DVC:LineSeries IndependentValuePath="Key" DependentValuePath="Value" Title="Vk" AnimationSequence="Simultaneous">
+                <DVC:LineSeries.Effect>
+                    <DropShadowEffect ShadowDepth="0"/>
+                </DVC:LineSeries.Effect>
+            </DVC:LineSeries>
         </DVC:Chart>
         <Grid HorizontalAlignment="Stretch" Height="50" VerticalAlignment="Top" Background="#FFEEEEEE" Grid.ColumnSpan="2" Margin="0,0,-0.333,0">
             <Grid.Effect>
                 <DropShadowEffect ShadowDepth="0"/>
             </Grid.Effect>
-            <Label Content="Rregullimi digjital me komunikim nepermjet cloud" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="16" FontWeight="Normal" FontFamily="Bahnschrift"/>
+            <Label Content="Rregullimi digjital me komunikim nepermjet cloud" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" FontFamily="Bahnschrift"/>
+        </Grid>
+        <Grid Margin="10" Grid.Row="1" Background="#FFEEEEEE">
+            <Grid.Effect>
+                <DropShadowEffect ShadowDepth="0"/>
+            </Grid.Effect>
+            <ListBox x:Name="listOfResults" Margin="10" Background="#FFEEEEEE" FontFamily="Bahnschrift" FontSize="14"/>
+        </Grid>
+        <Grid Margin="10,10,9.667,10" Grid.Row="1" Background="#FFEEEEEE" Grid.Column="1">
+            <Grid.Effect>
+                <DropShadowEffect ShadowDepth="0"/>
+            </Grid.Effect>
+            <Label Content="Totali" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Bahnschrift"/>
+            <Label Content="Vonesa koheore mesatare:" HorizontalAlignment="Left" Margin="30,44,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Bahnschrift"/>
+            <Label Content="Vonesa koheore minimale:" HorizontalAlignment="Left" Margin="32,78,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Bahnschrift"/>
+            <Label Content="Vonesa koheore maksimale:" HorizontalAlignment="Left" Margin="20,112,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Bahnschrift"/>
+            <Label x:Name="vkMesatare" Content="na" HorizontalAlignment="Left" Margin="236,44,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Bahnschrift" Background="#FFE0E0E0" Width="183" HorizontalContentAlignment="Center"/>
+            <Label x:Name="vkMinimale" Content="na" HorizontalAlignment="Left" Margin="236,78,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Bahnschrift" Background="#FFE0E0E0" Width="183" HorizontalContentAlignment="Center"/>
+            <Label x:Name="vkMaksimale" Content="na" HorizontalAlignment="Left" Margin="236,112,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Bahnschrift" Background="#FFE0E0E0" Width="183" HorizontalContentAlignment="Center"/>
         </Grid>
     </Grid>
 </Window>
